@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Refine"
+  short_description: "基于 project 文档继续逐项收敛需求"
+  default_prompt: "Use $workflow-refine to read docs/project.md first and refine one applicable design section at a time."

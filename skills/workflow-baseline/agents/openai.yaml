@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Baseline"
+  short_description: "逐项建立需求基线并写入 project 文档"
+  default_prompt: "Use $workflow-baseline to discuss goals, non-goals, technical constraints, and acceptance criteria one by one."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Breakdown"
+  short_description: "根据 project 文档拆分任务与测试说明"
+  default_prompt: "Use $workflow-breakdown to read docs/project.md and create task and task-test documents under docs/tasks."

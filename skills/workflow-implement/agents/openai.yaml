@@ -1,0 +1,4 @@
+interface:
+  display_name: "Workflow Implement"
+  short_description: "按单任务先测后写并补 approval 文档"
+  default_prompt: "Use $workflow-implement to implement exactly one task by reading docs/project.md and the related task files first."
