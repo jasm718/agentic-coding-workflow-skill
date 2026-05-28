@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Refine'
+  short_description: 'Pressure-test and improve feature specs'
+  default_prompt: 'Use $refine to pressure-test and improve prd doc created by $brainstorming.'

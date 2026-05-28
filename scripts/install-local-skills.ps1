@@ -5,6 +5,10 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $sourceRoot = Join-Path $repoRoot "skills"
 $targetRoot = Join-Path $env:USERPROFILE ".agents\skills"
 $skillNames = @(
+    "baseline",
+    "refine"
+)
+$legacySkillNames = @(
     "workflow-baseline",
     "workflow-refine",
     "workflow-breakdown",
@@ -16,6 +20,20 @@ if (-not (Test-Path -LiteralPath $sourceRoot)) {
 }
 
 New-Item -ItemType Directory -Force -Path $targetRoot | Out-Null
+
+foreach ($skillName in $legacySkillNames) {
+    $targetPath = Join-Path $targetRoot $skillName
+    if (-not (Test-Path -LiteralPath $targetPath)) {
+        continue
+    }
+
+    $item = Get-Item -LiteralPath $targetPath -Force
+    if ($item.LinkType -ne "Junction") {
+        throw "Legacy target exists and is not a junction: $targetPath"
+    }
+
+    [System.IO.Directory]::Delete($targetPath)
+}
 
 foreach ($skillName in $skillNames) {
     $sourcePath = Join-Path $sourceRoot $skillName

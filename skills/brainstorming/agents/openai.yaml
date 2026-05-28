@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Baseline'
+  short_description: '一次性收束需求并写入 project 文档'
+  default_prompt: 'Use $baseline to discuss the project baseline and refinement topics, then write docs/project.md once after confirmation.'
