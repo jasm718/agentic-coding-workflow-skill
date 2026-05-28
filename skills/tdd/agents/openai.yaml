@@ -1,0 +1,4 @@
+interface:
+  display_name: "TDD"
+  short_description: "用红绿重构循环实现功能或修复 bug"
+  default_prompt: "Use $tdd to implement the next change with one failing behavior test, the minimal fix, and refactoring after green."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Breakdown"
-  short_description: "把 spec 拆成可编码任务"
-  default_prompt: "Use $breakdown to read docs/FEATURE/spec.md and create implementation-ready task documents under docs/FEATURE/tasks."
+  display_name: "To Task"
+  short_description: "把 PRD 拆成可编码任务"
+  default_prompt: "Use $to-task to read docs/<feature>/prd.md and create implementation-ready task documents under docs/<feature>/tasks."

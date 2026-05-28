@@ -3,8 +3,12 @@ $ErrorActionPreference = "Stop"
 
 $targetRoot = Join-Path $env:USERPROFILE ".agents\skills"
 $skillNames = @(
-    "baseline",
+    "brainstorming",
     "refine",
+    "tdd",
+    "to-task",
+    "baseline",
+    "breakdown",
     "workflow-baseline",
     "workflow-refine",
     "workflow-breakdown",

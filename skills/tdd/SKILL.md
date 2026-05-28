@@ -1,6 +1,6 @@
 ---
 name: tdd
-description: 使用红-绿-重构循环进行测试驱动开发。仅在用户希望用 TDD 构建功能或修复 bug、提到“red-green-refactor”、需要集成测试，或要求先写测试时触发。
+description: 使用红-绿-重构循环进行测试驱动开发。仅在用户显式使用 `$tdd`，并希望用 TDD 构建功能或修复 bug、提到“red-green-refactor”、需要集成测试，或要求先写测试时触发。
 ---
 
 # 测试驱动开发

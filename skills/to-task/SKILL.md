@@ -3,7 +3,7 @@ name: to-task
 description: 将需求拆成可被code agent独立领取和实施的开发任务。仅在用户显式使用 `$to-task` 时触发。
 ---
 
-# 拆解为 Issues
+# 拆解为 Tasks
 
 用纵向切片(tracer bullets)，把 `docs/<feature>/prd.md` 拆成独立的、可以给code agent实现的开发任务。
 
@@ -19,7 +19,7 @@ description: 将需求拆成可被code agent独立领取和实施的开发任务
 
 ### 3. 面向切片思考拆分方案
 
-把计划拆成 **tracer bullet** 类型的任务。每个issue都是一条很薄的纵向切片，应该端到端穿过所有集成层，而不是只覆盖某一层的横向切片。
+把计划拆成 **tracer bullet** 类型的任务。每个 task 都是一条很薄的纵向切片，应该端到端穿过所有集成层，而不是只覆盖某一层的横向切片。
 
 <vertical-slice-rules>
 
@@ -35,7 +35,8 @@ description: 将需求拆成可被code agent独立领取和实施的开发任务
 用编号列表展示拟定的拆分方案。每个切片都要展示：
 
 - **名称**：简短、清晰的名称
-- **Blocked by**：其他哪些切片必须先完成，如果没有就写无
+- **任务标识**：拟使用的任务文件名，格式为两位序号加短横线名称，例如 `01-user-login`
+- **Blocked by**：其他哪些任务必须先完成，如果没有就写无
 - **用户故事**：覆盖了哪些用户故事
 
 然后询问用户：
@@ -48,6 +49,8 @@ description: 将需求拆成可被code agent独立领取和实施的开发任务
 
 ### 5. 编写任务
 
-对每个确认后的切片，使用`task-template.md`这个模板编写一个开发任务，创建并保存到docs/<feature>/tasks/<task>.md。
+对每个确认后的切片，使用 `task-template.md` 这个模板编写一个开发任务，创建并保存到 `docs/<feature>/tasks/<task>.md`。
 
-按顺序发布任务，先发布必须先完成的，再发布依赖它的。这样你就可以在`Blocked by`字段中引用真实的任务标识。
+`<task>` 使用两位序号加短横线名称，例如 `01-user-login.md`。任务标识就是去掉 `.md` 后缀的文件名。
+
+按顺序写入任务，先写必须先完成的，再写依赖它的。这样就可以在 `Blocked by` 字段中引用真实的任务标识。

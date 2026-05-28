@@ -5,10 +5,14 @@ $repoRoot = Split-Path -Parent $PSScriptRoot
 $sourceRoot = Join-Path $repoRoot "skills"
 $targetRoot = Join-Path $env:USERPROFILE ".agents\skills"
 $skillNames = @(
-    "baseline",
-    "refine"
+    "brainstorming",
+    "refine",
+    "tdd",
+    "to-task"
 )
 $legacySkillNames = @(
+    "baseline",
+    "breakdown",
     "workflow-baseline",
     "workflow-refine",
     "workflow-breakdown",

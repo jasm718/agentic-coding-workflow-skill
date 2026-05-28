@@ -1,4 +1,4 @@
-<issue-template>
+<task-template>
 
 ## 交付物
 
@@ -14,7 +14,7 @@
 
 ## Blocked by
 
-- 如果有，引用阻塞当前工作的 issue，
+- 如果有，引用阻塞当前工作的任务标识，
 - 如果没有阻塞项，则写：没有，可以马上开始
 
-</issue-template>
+</task-template>

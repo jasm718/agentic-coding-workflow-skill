@@ -1,4 +1,4 @@
 interface:
-  display_name: 'Baseline'
-  short_description: '一次性收束需求并写入 project 文档'
-  default_prompt: 'Use $baseline to discuss the project baseline and refinement topics, then write docs/project.md once after confirmation.'
+  display_name: 'Brainstorming'
+  short_description: '头脑风暴并收束初版 PRD'
+  default_prompt: 'Use $brainstorming to clarify a feature idea, then write docs/<feature>/prd.md after confirmation.'
