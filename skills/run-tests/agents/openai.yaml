@@ -1,0 +1,4 @@
+interface:
+  display_name: "执行测试"
+  short_description: "确认改动、环境与功能及回归 E2E 范围，经用户确认后执行并汇报"
+  default_prompt: "使用 $run-tests，先理解当前改动与环境，展示功能 E2E 和回归 E2E 范围，等待我确认后在本地或 Jenkins 执行并汇报结果。"

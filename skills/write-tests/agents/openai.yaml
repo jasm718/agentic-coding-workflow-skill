@@ -1,0 +1,4 @@
+interface:
+  display_name: "编写测试"
+  short_description: "先展示用例设计并由用户确认，再实现三层测试、维护列表与验证结果"
+  default_prompt: "使用 $write-tests，先展示按模块和功能组织的用例设计，等待我确认后再编写代码；已有确认计划则直接实现。"

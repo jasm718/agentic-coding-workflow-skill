@@ -8,15 +8,10 @@ $skillNames = @(
     "brainstorming",
     "refine",
     "tdd",
-    "to-task"
-)
-$legacySkillNames = @(
-    "baseline",
-    "breakdown",
-    "workflow-baseline",
-    "workflow-refine",
-    "workflow-breakdown",
-    "workflow-implement"
+    "to-task",
+    "init-testenv",
+    "run-tests",
+    "write-tests"
 )
 
 if (-not (Test-Path -LiteralPath $sourceRoot)) {
@@ -24,20 +19,6 @@ if (-not (Test-Path -LiteralPath $sourceRoot)) {
 }
 
 New-Item -ItemType Directory -Force -Path $targetRoot | Out-Null
-
-foreach ($skillName in $legacySkillNames) {
-    $targetPath = Join-Path $targetRoot $skillName
-    if (-not (Test-Path -LiteralPath $targetPath)) {
-        continue
-    }
-
-    $item = Get-Item -LiteralPath $targetPath -Force
-    if ($item.LinkType -ne "Junction") {
-        throw "Legacy target exists and is not a junction: $targetPath"
-    }
-
-    [System.IO.Directory]::Delete($targetPath)
-}
 
 foreach ($skillName in $skillNames) {
     $sourcePath = Join-Path $sourceRoot $skillName

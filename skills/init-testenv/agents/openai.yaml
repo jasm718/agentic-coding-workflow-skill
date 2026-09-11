@@ -1,0 +1,4 @@
+interface:
+  display_name: "初始化测试工具"
+  short_description: "确认测试范围，准备最小工具、目录与手动入口，初始化时不执行测试"
+  default_prompt: "使用 $init-testenv，先检查并确认项目需要的测试层级和运行端，再初始化最小测试工具、结构和使用说明，不执行测试。"

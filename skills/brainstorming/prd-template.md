@@ -65,6 +65,22 @@ product-media-service
 
 </module-change-example>
 
+### 数据结构
+
+涉及到的数据结构 schema 变动。使用表格或类型定义展示核心数据结构。只写与需求直接相关的数据字段，不要罗列无关表或完整数据库结构。
+
+<data-structure-example>
+
+| 字段            | 类型                             | 说明             |
+| --------------- | -------------------------------- | ---------------- |
+| `productId`     | `string`                         | 商品 ID          |
+| `modelUrl`      | `string`                         | 3D 模型文件地址  |
+| `textureUrl`    | `string`                         | 可选贴图文件地址 |
+| `defaultCamera` | `object`                         | 默认展示视角     |
+| `status`        | `available \| missing \| failed` | 模型资源状态     |
+
+</data-structure-example>
+
 ### 代码/目录变动
 
 将要变动的代码文件/文件夹，使用ascii目录树展示核心改动相关的目录结构，并标明重要文件或目录的修改目标。

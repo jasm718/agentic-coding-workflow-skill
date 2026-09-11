@@ -1,0 +1,4 @@
+interface:
+  display_name: "使用 subagent"
+  short_description: "用 subagent 执行实现计划"
+  default_prompt: "Use $using-subagent to execute this implementation plan with implementer, spec reviewer, and code quality reviewer subagents."

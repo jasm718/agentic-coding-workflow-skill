@@ -7,12 +7,9 @@ $skillNames = @(
     "refine",
     "tdd",
     "to-task",
-    "baseline",
-    "breakdown",
-    "workflow-baseline",
-    "workflow-refine",
-    "workflow-breakdown",
-    "workflow-implement"
+    "init-testenv",
+    "run-tests",
+    "write-tests"
 )
 
 if (-not (Test-Path -LiteralPath $targetRoot)) {
